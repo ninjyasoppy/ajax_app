@@ -1,7 +1,7 @@
 function memo() {
   const submit = document.getElementById("submit");//投稿ボタンID取得
   submit.addEventListener("click", (e) => {//「click」した場合に実行される関数を定義
-    const formData = new FormData(document.getElementById("form"));
+    const formData = new FormData(document.getElementById("form"));//フォームで入力された値を取得できるオブジェクトのこと
     const XHR = new XMLHttpRequest();
     XHR.open("POST", "/posts", true);
     XHR.responseType = "json";
